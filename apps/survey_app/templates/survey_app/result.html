@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'css/survey_app/survey.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <p class="thanks">Thanks for submittion this form! You have submitted this form {{ request.session.counter }} time(s) now.</p>
+    <div>
+        <h2>Submitted Info</h2>
+        <p>Name: {{ name }}</p>
+        <p>Dojo Location: {{ location }}</p>
+        <p>Favorite Language: {{ language }}</p>
+        <p>Comment: {{ comment }}</p>
+        <a href='/'><button class='button'>Go Back</button></a>
+    </div>
+</body>
+</html>
